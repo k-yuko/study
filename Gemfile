@@ -38,3 +38,7 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'redis', '3.0.7'
+gem 'redis-store', '1.1.4'
+gem 'redis-rails', '4.0.0'
+

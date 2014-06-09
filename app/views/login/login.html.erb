@@ -1,0 +1,25 @@
+<body id="login">
+<div class="container">
+  <%= form_tag "index", :class => "form-signin", :method => "post" do -%>
+    <h2 class="form-signin-heading">ろぐいんがめん</h2>
+    <% if @error_message.blank? then %>
+    <% else %>
+    <div class="alert alert-error">
+      ユーザIDまたはパスワードが間違っています。
+    </div>
+    <% end %>
+
+    <input class="input-block-level" placeholder="ユーザID" type="text" name="login_id">
+    <input class="input-block-level" placeholder="パスワード" type="password" name="password">
+
+    <div class="pull-right">
+      <button class="btn btn-primary" type="submit">ログイン</button>
+    </div>
+
+    <div class="clearfix"></div>
+
+  <% end %>
+</div>
+<!-- /container -->
+
+</body>

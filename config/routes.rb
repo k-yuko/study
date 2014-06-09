@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
+  resources :users
+
   resources :museums
+
+  root :to => 'login#login'
+
+  get 'login' => 'login#login'
+
+  post 'index' => 'login#index'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

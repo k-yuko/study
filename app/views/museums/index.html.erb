@@ -10,9 +10,10 @@
   <tbody>
     <% @museums.each do |museum| %>
       <tr>
-        <td><%= museum %></td>
+        <td><%= museum.id %></td>
+        <td><%= museum.name %></td>
         <td><%= link_to 'Show', museum %></td>
-        <td><%= link_to 'Edit', edit_museum_path(museum) %></td>
+        <td><%= link_to 'Edit', edit_museum_path(museum.id) %></td>
         <td><%= link_to 'Destroy', museum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
