@@ -2,6 +2,10 @@
 <div class="container">
   <%= form_tag "index", :class => "form-signin", :method => "post" do -%>
     <h2 class="form-signin-heading">ろぐいんがめん</h2>
+    <% if response.status == 412  %>
+      <p>セッションの有効期限が切れています。</p>
+    <% else %>
+    <% end %>
     <% if @error_message.blank? then %>
     <% else %>
     <div class="alert alert-error">
